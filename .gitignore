@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local source assets (already processed into /public/images)
+/hackathons
+/other images
+/profile.png
+
+# local Claude Code settings (machine-specific)
+.claude/settings.local.json
