@@ -7,7 +7,7 @@ export type Project = {
   image?: string; // custom thumbnail, takes priority over YouTube thumbnail
   github?: string;
   live?: string;
-  video?: string; // youtube URL
+  video?: string; // YouTube or Google Drive share URL
   featured: boolean;
   comingSoon?: boolean;
 };
@@ -23,7 +23,13 @@ export function youtubeThumbnail(url?: string): string | undefined {
   return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : undefined;
 }
 
-export function youtubeEmbed(url?: string): string | undefined {
+function driveId(url?: string): string | undefined {
+  return url?.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/)?.[1];
+}
+
+export function videoEmbed(url?: string): string | undefined {
+  const drive = driveId(url);
+  if (drive) return `https://drive.google.com/file/d/${drive}/preview`;
   const id = youtubeId(url);
   return id ? `https://www.youtube.com/embed/${id}` : undefined;
 }
@@ -77,8 +83,8 @@ export const projects: Project[] = [
       "Magic Meet is a meeting-native multi-agent planning system that turns live enterprise conversations into grounded solution plans, architecture recommendations, business impact summaries, and sprint-ready execution outputs. Designed for Azure AI Foundry-style agent orchestration, where models, tools, knowledge sources, and governance work together in one workflow.",
     tags: ["Azure AI Foundry", "Multi-Agent", "Enterprise AI"],
     image: "/images/projects/meeting-intelligence.jpg",
+    video: "https://drive.google.com/file/d/1eyiyrZattyNNudFyuktYspFOy_nESZMv/view?usp=sharing",
     featured: false,
-    comingSoon: true,
   },
   {
     slug: "alertx",
@@ -114,6 +120,7 @@ export const projects: Project[] = [
     tags: ["Computer Vision", "Video Analytics", "Machine Learning"],
     image: "/images/projects/beyond-vision.jpg",
     github: "https://github.com/Fazil-24/Beyond-Vision",
+    video: "https://drive.google.com/file/d/1KV-jiD_-B3i5DxOolgwT2fIb6XkdvVJZ/view?usp=sharing",
     featured: false,
   },
   {

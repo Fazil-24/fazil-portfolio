@@ -16,7 +16,7 @@ export default function About() {
           <div className="glass glass-glow rounded-3xl p-8 sm:p-10 max-w-4xl mx-auto text-center">
             <p className="text-lg text-foreground/90 leading-relaxed">
               I&apos;m an{" "}
-              <span className="text-gradient font-semibold">AI Engineer</span> with close to{" "}
+              <span className="text-gradient font-semibold">AI Engineer</span> with more than{" "}
               <span className="text-foreground font-semibold">4 years</span> of experience
               designing, building, and deploying production AI systems in enterprise
               environments — from agentic workflows and RAG pipelines to computer vision and

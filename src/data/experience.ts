@@ -8,10 +8,19 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
+    company: "Alba Corp",
+    role: "AI Engineer",
+    duration: "Sept 2026 — Present",
+    bullets: [
+      "Orchestrated a complex production workflow of autonomous calling agents for lead nurturing, integrated with CallGear, ElevenLabs Agents, Twilio, n8n, Odoo, and Supabase — reducing leads going cold and delivering an immediate business uplift.",
+      "Built multiple vibe-coded web apps for business operations — Logistics, Facilities, and a Client Portal — shipped at rapid pace by following harness engineering practices.",
+    ],
+  },
+  {
     company: "Unisys",
     role: "AI Engineer",
     team: "AI Practice Team, Enterprise CTO",
-    duration: "Sept 2022 — Present",
+    duration: "Sept 2022 — Sept 2026",
     bullets: [
       "Created an agentic AI solution for contract analysis and summarization, saving up to $70k of the procurement team's budget per year.",
       "Built a conversational interface using Azure OpenAI for frontline workers, improving overall efficiency by 82%.",

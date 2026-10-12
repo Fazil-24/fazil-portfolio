@@ -19,11 +19,13 @@ function RotatingRole() {
   }, []);
 
   return (
-    <span className="relative inline-block h-[1.4em] overflow-hidden align-bottom">
+    // All roles share one grid cell, so the box always fits the widest one in its
+    // real (semibold) font; the extra right padding keeps gradient-clipped glyphs intact.
+    <span className="inline-grid h-[1.4em] overflow-hidden align-bottom">
       {site.roles.map((role, i) => (
         <motion.span
           key={role}
-          className="absolute left-0 top-0 whitespace-nowrap text-gradient font-semibold"
+          className="col-start-1 row-start-1 whitespace-nowrap pr-[0.15em] text-gradient font-semibold"
           initial={false}
           animate={{
             y: i === index ? 0 : i < index ? "-100%" : "100%",
@@ -34,7 +36,6 @@ function RotatingRole() {
           {role}
         </motion.span>
       ))}
-      <span className="invisible">{site.roles.reduce((a, b) => (a.length > b.length ? a : b))}</span>
     </span>
   );
 }

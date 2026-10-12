@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import { X, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
-import { Project, youtubeEmbed, projectThumbnail } from "@/data/projects";
+import { Project, videoEmbed, projectThumbnail } from "@/data/projects";
 
 export default function ProjectModal({
   project,
@@ -24,7 +24,7 @@ export default function ProjectModal({
     };
   }, [project, onClose]);
 
-  const embed = youtubeEmbed(project?.video);
+  const embed = videoEmbed(project?.video);
   const thumb = project ? projectThumbnail(project) : undefined;
 
   return (

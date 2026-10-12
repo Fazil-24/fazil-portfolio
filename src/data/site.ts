@@ -1,7 +1,7 @@
 export const site = {
   name: "Mohamed Fazil",
   title: "AI Engineer",
-  location: "Bangalore, India",
+  location: "Dubai, United Arab Emirates",
   email: "mfazil2409@gmail.com",
   phone: "+91 97914 62614",
   linkedin: "https://linkedin.com/in/mohamed-fazil24",
@@ -9,11 +9,12 @@ export const site = {
   facebook: "", // TODO: add your Facebook profile URL
   resumeUrl: "/Mohamed_Fazil_AI_Engineer_CV.pdf",
   tagline:
-    "I build production AI systems — agentic workflows, RAG pipelines, and computer vision — that ship real business impact, not just demos.",
+    "I build production AI systems — agentic workflows, RAG pipelines, computer vision, harness engineering, cloud ops, and hypervelocity engineering — that ship real business impact, not just demos.",
   roles: [
     "AI Engineer",
+    "Forward Deployed Engineer",
+    "Microsoft TITAN",
     "GenAI & Agentic Systems",
-    "LLM / RAG Builder",
     "Computer Vision Engineer",
   ],
   stats: [
