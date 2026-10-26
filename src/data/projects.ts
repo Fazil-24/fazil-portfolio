@@ -86,6 +86,7 @@ export const projects: Project[] = [
     image: "/images/projects/planify.svg",
     github: "https://github.com/Fazil-24/Planify",
     live: "https://planify-blush.vercel.app",
+    video: "https://drive.google.com/file/d/1YWA7HgCSoAuvUy1RC4KLhYNwxG55I2bs/view?usp=sharing",
     featured: false,
   },
   {
@@ -97,6 +98,7 @@ export const projects: Project[] = [
     tags: ["n8n", "Cerebras", "AI Agents", "Automation", "Human-in-the-loop"],
     image: "/images/projects/renoagent.svg",
     github: "https://github.com/Fazil-24/RenoAgent",
+    video: "https://drive.google.com/file/d/1pg3oN1Demd77ceXbDgB8Gqh1Z9HYfMyk/view?usp=sharing",
     featured: false,
   },
   {
@@ -109,6 +111,7 @@ export const projects: Project[] = [
     image: "/images/projects/oud.svg",
     github: "https://github.com/Fazil-24/OUD",
     live: "https://oud-seven.vercel.app",
+    video: "https://drive.google.com/file/d/1tpcnK-0Hsdq6e8ufKNjd00b3M_wfmBW3/view?usp=sharing",
     featured: false,
   },
   {
