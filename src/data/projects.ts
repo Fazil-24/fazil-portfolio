@@ -10,6 +10,7 @@ export type Project = {
   video?: string; // YouTube or Google Drive share URL
   featured: boolean;
   comingSoon?: boolean;
+  inProgress?: boolean;
 };
 
 function youtubeId(url?: string): string | undefined {
@@ -74,6 +75,63 @@ export const projects: Project[] = [
     live: "https://lok-ai.vercel.app/",
     video: "https://youtu.be/vpcm0gkTEwU",
     featured: true,
+  },
+  {
+    slug: "planify",
+    title: "Planify",
+    tagline: "A planning agent that maps out your day efficiently",
+    description:
+      "Planify (Plan Intelligently For You) is a daily errand planner. Describe your tasks in plain language, including where each one is, and it builds a traffic-aware, optimally ordered route on a live map. Cerebras parses the task list and scores urgency, Geoapify geocodes each place, and TomTom builds a live travel-time matrix between stops. A deterministic algorithm, not the LLM, chooses the order, and the plan is then explained in plain language with an animated journey strip.",
+    tags: ["Cerebras", "Next.js", "TomTom", "Geoapify", "AI Agents"],
+    image: "/images/projects/planify.svg",
+    github: "https://github.com/Fazil-24/Planify",
+    live: "https://planify-blush.vercel.app",
+    featured: false,
+  },
+  {
+    slug: "renoagent",
+    title: "RenoAgent",
+    tagline: "An agent that audits and negotiates renovation quotes",
+    description:
+      "RenoAgent is an n8n-based agent that understands, compares and negotiates renovation vendor quotations end to end. It runs research, compliance and scope checks, scores each quote, and routes the result through a human-in-the-loop approval gate before any negotiation goes out, cutting quote review time by about 95%. Built with the Cerebras API, SerpAPI, Gmail OAuth2 and Google Sheets.",
+    tags: ["n8n", "Cerebras", "AI Agents", "Automation", "Human-in-the-loop"],
+    image: "/images/projects/renoagent.svg",
+    github: "https://github.com/Fazil-24/RenoAgent",
+    featured: false,
+  },
+  {
+    slug: "oud",
+    title: "OUD — Optimized Usage Dashboard",
+    tagline: "A dashboard to analyze usage and spend across AI tools",
+    description:
+      "OUD tracks AI service and model spend across teams. It records tokens, calls and cost by team, user, service, model and task type, with role-based access enforced in the database through Postgres Row-Level Security: admins see every team, team leads see their own, and members see only their own rows. Usage and analytics dashboards, a model-overlap savings view and in-browser CSV import help teams spot where to cut cost.",
+    tags: ["Next.js", "Supabase", "Postgres RLS", "Recharts", "TypeScript"],
+    image: "/images/projects/oud.svg",
+    github: "https://github.com/Fazil-24/OUD",
+    live: "https://oud-seven.vercel.app",
+    featured: false,
+  },
+  {
+    slug: "skyrec",
+    title: "SkyRec",
+    tagline: "Multi-agent airline disruption recovery",
+    description:
+      "SkyRec is a multi-agent airline disruption-recovery system built on an agentic architecture with MCP, the Gemini API and Streamlit. When flights are disrupted it automatically re-books and re-routes affected passengers, cutting manual recovery handling time by about 76%.",
+    tags: ["Multi-Agent", "MCP", "Gemini", "Streamlit"],
+    image: "/images/projects/skyrec.svg",
+    featured: false,
+    inProgress: true,
+  },
+  {
+    slug: "tenderlens",
+    title: "TenderLens",
+    tagline: "Making sense of tender documents with AI",
+    description:
+      "TenderLens is an AI-powered assistant for reading and analysing tender documents, helping teams quickly understand requirements and spot what matters. Currently in progress — more details coming soon.",
+    tags: ["GenAI", "Document Intelligence", "AI Agents"],
+    image: "/images/projects/tenderlens.svg",
+    featured: false,
+    inProgress: true,
   },
   {
     slug: "meeting-intelligence",

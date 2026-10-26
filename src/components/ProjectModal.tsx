@@ -94,6 +94,12 @@ export default function ProjectModal({
                 ))}
               </div>
 
+              {project.inProgress && (
+                <p className="mt-5 inline-block rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-medium text-amber-300">
+                  In Progress
+                </p>
+              )}
+
               {project.comingSoon && (
                 <p className="mt-5 text-sm text-accent-cyan">
                   Full write-up, links, and demo video for this project are coming soon.

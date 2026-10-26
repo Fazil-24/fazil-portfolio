@@ -37,6 +37,11 @@ export default function ProjectCard({
             <PlayCircle size={44} className="text-white drop-shadow-lg" />
           </div>
         )}
+        {project.inProgress && (
+          <span className="absolute top-3 left-3 rounded-full bg-black/60 backdrop-blur px-3 py-1 text-xs font-medium text-amber-300 border border-amber-300/30">
+            In Progress
+          </span>
+        )}
         {project.comingSoon && (
           <span className="absolute top-3 right-3 rounded-full bg-black/60 backdrop-blur px-3 py-1 text-xs font-medium text-accent-cyan border border-accent-cyan/30">
             Details Coming Soon
